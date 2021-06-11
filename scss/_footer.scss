@@ -1,0 +1,23 @@
+footer{
+    
+    background-color: black;
+      
+}
+
+ul {
+    border-left: 2px solid white;
+    li {
+        list-style-type: none;
+      }
+      .text-reset {
+        list-style-type: none;
+      }
+      a {
+        text-decoration: none;
+        a:hover {
+            background-color: #2f5d62;
+            transition: all 2;
+          }
+      }
+      
+}

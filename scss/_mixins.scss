@@ -1,0 +1,21 @@
+$color: black;
+
+@mixin body ($color){
+    background-color: $color;
+    
+    
+}
+
+@mixin p ($color-parrafos,$linea-diseno ){
+    color: $color-parrafos;
+    border-right: $linea-diseno;
+}
+
+ p {
+     @include p(white,1px solid white)
+
+ }
+
+ body{
+     @include body(black)
+ }

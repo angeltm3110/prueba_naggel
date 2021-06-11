@@ -1,0 +1,72 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+/*Body-seccion home*/
+/*extension basica*/
+body {
+  background-color: black;
+}
+body p {
+  color: white;
+  border-right: 1px solid white;
+}
+body .row-quienes-somos {
+  color: gold;
+  font-family: "Permanent Marker", cursive;
+}
+body .col-6 {
+  padding: 0%;
+}
+body .banner {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+body .container {
+  height: 50%;
+  width: 100%;
+}
+
+/*---footer- seccion home--*/
+footer {
+  background-color: black;
+}
+
+ul {
+  border-left: 2px solid white;
+}
+ul li {
+  list-style-type: none;
+}
+ul .text-reset {
+  list-style-type: none;
+}
+ul a {
+  text-decoration: none;
+}
+ul a a:hover {
+  background-color: #2f5d62;
+  transition: all 2;
+}
+
+/*Seccion nuestras naggel*/
+.carousel-inner > img {
+  width: 100%;
+  height: 400px;
+}
+
+/*Variables*/
+/*Listas*/
+/*extension basica*/
+/*mixins*/
+p {
+  color: white;
+  border-right: 1px solid white;
+}
+
+body {
+  background-color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

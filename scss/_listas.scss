@@ -1,0 +1,14 @@
+
+$colores: black,
+         gold, 
+         #2f5d62, 
+         white;
+
+/*extension basica*/
+
+%flexbox{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+}

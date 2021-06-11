@@ -1,0 +1,19 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+/*Body-seccion home*/
+@import"body";
+/*---footer- seccion home--*/
+@import"footer";
+
+/*Seccion nuestras naggel*/
+
+@import"nuestras-naggel";
+    /*Variables*/
+@import "../scss/variables/variables";
+   /*Listas*/
+   @import"listas";
+   /*mixins*/
+   @import "../scss/mixins"
+    
