@@ -38,6 +38,11 @@ p {
 .container-principal {
   background-image: url(image/imagencerveza.jpg);
 }
+
+.hi-banner {
+  color: blue;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
@@ -58,6 +63,25 @@ ul a {
 ul a a:hover {
   background-color: #2f5d62;
   transition: all 2;
+}
+
+/*Seccion nuestras naggel*/
+/*seccion nuestras naggel*/
+.container-principal {
+  background: url(../image/imagencerveza.jpg);
+  height: 500px;
+}
+
+.h1-banner {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.carousel-inner > img {
+  width: 100%;
+  height: 400px;
 }
 
 /*Variables*/
