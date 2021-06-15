@@ -31,9 +31,13 @@
     /*seccion nuestras naggel*/
 
     .container-principal{
-        background-image: url(image/imagencerveza.jpg);
+        background: url(../image/imagencerveza.jpg);
+        
     }
-
-    .hi-banner{
-        color: blue;
+    
+    .h1-banner{
+        color:white;
+        text-align: center;
+        justify-content: center;
+        
     }
