@@ -39,5 +39,24 @@
         color:white;
         text-align: center;
         justify-content: center;
-        
+        padding-top: 200px;
+    }
+
+    .cervezas{
+        display: flex;
+        justify-content: space-around;
+        text-align: center;
+        font-size: 2rem;
+        text: bold;
+        text-decoration: none;
+        padding-top: 30px ;
+        padding-bottom: 30px;
+
+        a{
+            text-decoration-style: none;
+            color: white;
+        }
+    }
+    .menu-cervezas{
+        background-color: black;
     }

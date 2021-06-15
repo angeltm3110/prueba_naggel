@@ -43,6 +43,26 @@ p {
   color: white;
   text-align: center;
   justify-content: center;
+  padding-top: 200px;
+}
+
+.cervezas {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 2rem;
+  text: bold;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.cervezas a {
+  text-decoration-style: none;
+  color: white;
+}
+
+.menu-cervezas {
+  background-color: black;
 }
 
 /*---footer- seccion home--*/
@@ -72,13 +92,6 @@ ul a a:hover {
 .container-principal {
   background: url(../image/imagencerveza.jpg);
   height: 500px;
-}
-
-.h1-banner {
-  color: white;
-  text-align: center;
-  justify-content: center;
-  padding-top: 200px;
 }
 
 .carousel-inner > img {
