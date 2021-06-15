@@ -1,4 +1,4 @@
-$color: black;
+
 
 @mixin body ($color){
     background-color: $color;
@@ -16,6 +16,4 @@ $color: black;
 
  }
 
- body{
-     @include body(black)
- }
+ 

@@ -1,8 +1,8 @@
 @import"../scss/variables/variables";
 
 @import"../scss/listas";
-body{
-    background-color: $bg-footer;
+
+
     p{
         color: white;
     border-right: 1px solid white;
@@ -11,6 +11,10 @@ body{
     .row-quienes-somos {
         color: nth($colores, 2 );
         font-family: "Permanent Marker", cursive;
+        background-color: black;
+    }
+    .descripcion-naggel{
+        background-color: black;
     }
     .col-6 {
         padding: 0%;
@@ -24,4 +28,12 @@ body{
         width: 100%;
       }
     
-}
+    /*seccion nuestras naggel*/
+
+    .container-principal{
+        background-image: url(image/imagencerveza.jpg);
+    }
+
+    .hi-banner{
+        color: blue;
+    }

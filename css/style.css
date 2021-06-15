@@ -5,27 +5,42 @@
 
 /*Body-seccion home*/
 /*extension basica*/
-body {
-  background-color: black;
-}
-body p {
+p {
   color: white;
   border-right: 1px solid white;
 }
-body .row-quienes-somos {
+
+.row-quienes-somos {
   color: gold;
   font-family: "Permanent Marker", cursive;
+  background-color: black;
 }
-body .col-6 {
+
+.descripcion-naggel {
+  background-color: black;
+}
+
+.col-6 {
   padding: 0%;
 }
-body .banner {
+
+.banner {
   margin-top: 10px;
   margin-bottom: 10px;
 }
-body .container {
+
+.container {
   height: 50%;
   width: 100%;
+}
+
+/*seccion nuestras naggel*/
+.container-principal {
+  background-image: url(image/imagencerveza.jpg);
+}
+
+.hi-banner {
+  color: blue;
 }
 
 /*---footer- seccion home--*/
@@ -51,6 +66,15 @@ ul a a:hover {
 }
 
 /*Seccion nuestras naggel*/
+/*seccion nuestras naggel*/
+.container-principal {
+  background-image: url(image/imagencerveza.jpg);
+}
+
+.hi-banner {
+  color: blue;
+}
+
 .carousel-inner > img {
   width: 100%;
   height: 400px;
@@ -63,10 +87,6 @@ ul a a:hover {
 p {
   color: white;
   border-right: 1px solid white;
-}
-
-body {
-  background-color: black;
 }
 
 /*# sourceMappingURL=style.css.map */
