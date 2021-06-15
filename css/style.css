@@ -50,7 +50,7 @@ p {
   display: flex;
   justify-content: space-around;
   text-align: center;
-  font-size: 2rem;
+  font-size: 2em;
   text: bold;
   text-decoration: none;
   padding-top: 30px;

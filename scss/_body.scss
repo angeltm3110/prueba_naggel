@@ -33,6 +33,7 @@
     .container-principal{
         background: url(../image/imagencerveza.jpg);
         
+        
     }
     
     .h1-banner{
@@ -46,11 +47,14 @@
         display: flex;
         justify-content: space-around;
         text-align: center;
-        font-size: 2rem;
+        font-size: 2em;
         text: bold;
         text-decoration: none;
         padding-top: 30px ;
         padding-bottom: 30px;
+        
+
+        
 
         a{
             text-decoration-style: none;
