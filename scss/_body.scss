@@ -43,19 +43,15 @@
         padding-top: 200px;
     }
 
-    .cervezas{
+    .cervezas {
         display: flex;
         justify-content: space-around;
         text-align: center;
         font-size: 2em;
-        text: bold;
         text-decoration: none;
-        padding-top: 30px ;
-        padding-bottom: 30px;
+        padding-top: 30px;
+        padding-bottom: 30px;  
         
-
-        
-
         a{
             text-decoration-style: none;
             color: white;
@@ -63,4 +59,21 @@
     }
     .menu-cervezas{
         background-color: black;
+    }
+
+    .red-honey-image{
+        width: 550px;
+        height: 300px;
+    }
+    .red-honey{
+        background-color: black;
+        justify-content: space-around;
+        p{
+            color: white;
+        }
+    }
+
+    .logo-red-honey{
+        background-color: black;
+        text-align: center;
     }
