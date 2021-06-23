@@ -96,6 +96,20 @@ p {
   background-color: black;
 }
 
+.logo-stout {
+  background-color: black;
+  text-align: center;
+}
+
+.stout-image {
+  width: 550px;
+  height: 300px;
+}
+
+.stout {
+  background-color: black;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
