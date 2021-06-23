@@ -7,5 +7,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/angeltm3110/prueba_naggel.git"
+  },
+  "bugs": {
+    "url": "https://github.com/angeltm3110/prueba_naggel/issues"
+  },
+  "homepage": "https://github.com/angeltm3110/prueba_naggel#readme",
   "description": ""
 }
