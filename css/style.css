@@ -82,6 +82,20 @@ p {
   text-align: center;
 }
 
+.logo-redipa {
+  background-color: black;
+  text-align: center;
+}
+
+.red-ipa-image {
+  width: 550px;
+  height: 300px;
+}
+
+.red-ipa {
+  background-color: black;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
