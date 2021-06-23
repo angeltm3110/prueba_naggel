@@ -5,6 +5,10 @@
 
 /*Body-seccion home*/
 /*extension basica*/
+* {
+  margin: 0%;
+}
+
 p {
   color: white;
   border-right: 1px solid white;
@@ -34,6 +38,14 @@ p {
   width: 100%;
 }
 
+.collage-home {
+  background-color: black;
+}
+
+.banner-home {
+  background-color: black;
+}
+
 /*seccion nuestras naggel*/
 .container-principal {
   background: url(../image/imagencerveza.jpg);
@@ -54,6 +66,7 @@ p {
   text-decoration: none;
   padding-top: 30px;
   padding-bottom: 30px;
+  border: 0px;
 }
 .cervezas a {
   text-decoration-style: none;
@@ -108,6 +121,16 @@ p {
 
 .stout {
   background-color: black;
+}
+
+.row {
+  margin: 0px;
+  padding: 0px;
+}
+
+.navbar {
+  text-align: center;
+  justify-content: center;
 }
 
 /*---footer- seccion home--*/
