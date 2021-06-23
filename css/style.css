@@ -133,6 +133,17 @@ p {
   justify-content: center;
 }
 
+/*SECCION DONDE ENCONTRARNOS*/
+.contacto-logo {
+  background-color: black;
+  text-align: center;
+}
+
+.contacto-image {
+  height: 7rem;
+  width: 400px;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
