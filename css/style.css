@@ -159,6 +159,50 @@ p {
   text-align: center;
 }
 
+/*Seccion Reservas*/
+.contenedor-principal-reservas {
+  background: url(../image/foto12.jpg);
+  height: 450px;
+}
+.contenedor-principal-reservas .reservas {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding-top: 200px;
+}
+
+.form-select {
+  text-align: center;
+}
+
+.dia-horario {
+  text-align: center;
+  background-color: #EBEDEF;
+}
+.dia-horario .martes {
+  text-align: center;
+  justify-content: center;
+}
+
+.horarios {
+  background-color: #EBEDEF;
+}
+
+.descripcion-reserva {
+  justify-content: center;
+  text-align: center;
+  color: #5499C7;
+}
+
+.text-white {
+  margin-top: 10px;
+}
+
+.email-form {
+  background-color: #EBEDEF;
+  margin-top: 10px;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
