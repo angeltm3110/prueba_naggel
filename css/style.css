@@ -144,6 +144,21 @@ p {
   width: 400px;
 }
 
+.maps-contacto-contenedor {
+  background-color: black;
+}
+
+.descripcion-contacto {
+  background-color: black;
+  text-align: center;
+}
+
+.detalles-contacto {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
