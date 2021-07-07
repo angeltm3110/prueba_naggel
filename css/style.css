@@ -203,6 +203,62 @@ p {
   margin-top: 10px;
 }
 
+/*SECCION QUIENES SOMOS*/
+.fondo-quienes-somos {
+  background-image: url(../image/foto12.jpg);
+  height: 400px;
+}
+
+.banner-quienes-somos {
+  color: white;
+  text-align: center;
+  justify-content: center;
+  padding-top: 170px;
+}
+
+.amantes {
+  background-color: #17202A;
+}
+
+.amantes-text {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Acme", sans-serif;
+}
+
+.text-amantes {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+
+.expertos-text {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Acme", sans-serif;
+}
+
+.text-expertos {
+  color: white;
+  font-family: "DM Sans", sans-serif;
+}
+
+.expertos {
+  background-color: #707B7C;
+}
+
+.compromiso {
+  background-color: #17202A;
+}
+
+.compromiso-text {
+  justify-content: center;
+  text-align: center;
+  color: white;
+  font-family: "Acme", sans-serif;
+}
+
 /*---footer- seccion home--*/
 footer {
   background-color: black;
