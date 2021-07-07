@@ -9,6 +9,11 @@
   margin: 0%;
 }
 
+a:hover {
+  transition: all 0.5s;
+  transform: scale(1.2);
+}
+
 p {
   color: white;
   border-right: 1px solid white;
@@ -74,7 +79,7 @@ p {
 }
 
 .menu-cervezas {
-  background-color: black;
+  background-color: #17202A;
 }
 
 .red-honey-image {

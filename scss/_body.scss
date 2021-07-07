@@ -5,6 +5,11 @@
     *{
         margin: 0%;
     }
+a:hover{
+    transition: all .5s;
+    transform: scale(1.2);
+}
+
     p{
         color: white;
     border-right: 1px solid white;
@@ -67,7 +72,7 @@
         }
     }
     .menu-cervezas{
-        background-color: black;
+        background-color: #17202A;
     
     }
 
@@ -78,6 +83,7 @@
     .red-honey{
         background-color: black;
         justify-content: space-around;
+        
         p{
             color: white;
         }
@@ -86,6 +92,7 @@
     .logo-red-honey{
         background-color: black;
         text-align: center;
+        
     }
     .logo-redipa{
         background-color: black;
