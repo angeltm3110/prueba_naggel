@@ -105,6 +105,11 @@ tipos.push(new Cerveza(3, "HONEY", 200));
 tipos.push(new Cerveza(4,"STOUT", 250));
 console.log(tipos);
 
+let divCervezas = document.createElement("div");
+
+divCervezas.innerHTML = "<h2>Tipo de cerveza: "+ tipos[0].tipo + "</h2><h4>"+ tipos[0].precioCerveza + "</h4>";
+
+document.body.appendChild(divCervezas);
 let salida = "";
 
 for (let index = 0; index < tipos.length; index++) {
