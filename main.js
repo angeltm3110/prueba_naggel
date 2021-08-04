@@ -1,5 +1,5 @@
 
-let productos = prompt("Por favor ingrese el producto");
+/*let productos = prompt("Por favor ingrese el producto");
 if(productos == "honey" ||  productos == "Honey"){
     alert("Has seleccionado Honey");
 }
@@ -85,7 +85,7 @@ reponer2.reponerStock(50);
 vender2.venderStock(50);
 console.log(producto2);
 console.log(producto3);
-console.log(producto4);
+console.log(producto4); */
 
 class Cerveza{
     constructor(id,tipo,precioCerveza){
@@ -105,11 +105,33 @@ tipos.push(new Cerveza(3, "HONEY", 200));
 tipos.push(new Cerveza(4,"STOUT", 250));
 console.log(tipos);
 
-let divCervezas = document.createElement("div");
+/*-------- DOM----------*/
+for (const cerveza of tipos) {
+    let divCervezas = document.createElement("div");
+    divCervezas.innerHTML = `<h2> ${cerveza.tipo}</h2>
+                            <h4>${cerveza.precioCerveza}</h4>
+                            <button class= "btnComprar" > COMPRAR </button>`;
+                             
+    document.body.appendChild(divCervezas);
+}
 
-divCervezas.innerHTML = "<h2>Tipo de cerveza: "+ tipos[0].tipo + "</h2><h4>"+ tipos[0].precioCerveza + "</h4>";
 
-document.body.appendChild(divCervezas);
+/* ------eventos -------*/ 
+const boton = document.getElementsByClassName("btnComprar");
+console.dir(boton);
+boton[0].addEventListener('click', ()=>{
+    alert("Comprado");
+})
+
+function comprarCervezas() {
+        alert('comprado');
+}
+
+for (const botones of boton) {
+        botones.addEventListener('click', comprarCervezas);
+}
+
+
 let salida = "";
 
 for (let index = 0; index < tipos.length; index++) {

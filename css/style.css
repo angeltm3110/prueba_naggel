@@ -52,6 +52,17 @@ p {
 }
 
 /*seccion nuestras naggel*/
+.boton-comprar {
+  background-color: black;
+  justify-content: center;
+  text-align: center;
+}
+
+.btnComprar {
+  justify-content: center;
+  text-align: center;
+}
+
 .container-principal {
   background: url(../image/imagencerveza.jpg);
 }
