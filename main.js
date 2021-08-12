@@ -1,35 +1,4 @@
 
-/*
-class Producto {
-    constructor (vender,reponer){
-        this.vender = vender;
-        this.reponer = reponer;
-        this.cantidad2= 100;
-    }
-   venderStock(){
-            this.vender = this.cantidad2 - 50 ;
-            console.log(this.vender);
-   }
-
-   reponerStock(){
-            this.reponer = this.cantidad2 + 25;
-            console.log(this.reponer);
-   }
-   
-}
-
-const producto2 = new Naggels( 2, prompt("Ingrese tipo de Naggel:"), 500);
-const producto3 = new Naggels( 3, prompt("ingrese tipo de Naggel:"), 700);
-const producto4 = new Naggels( 4, prompt("Ingrese tipo de Naggel:"), 800);
-const reponer2 = new Producto(8, 40);
-const vender2 = new Producto( 14, 5);
-
-reponer2.reponerStock(50);
-vender2.venderStock(50);
-console.log(producto2);
-console.log(producto3);
-console.log(producto4); */
-
 class Cerveza{
     constructor(id,tipo,precioCerveza,img){
     this.id =parseInt(id);
