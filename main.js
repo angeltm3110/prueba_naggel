@@ -1,62 +1,5 @@
 
-/*let productos = prompt("Por favor ingrese el producto");
-if(productos == "honey" ||  productos == "Honey"){
-    alert("Has seleccionado Honey");
-}
-
-if (productos == "amber" ||  productos == "Amber") {
-    alert("Has seleccionado Amber");
-}
-if (productos == "stout" || productos =="Stout") {
-    alert("Has seleccionado Stout");
-}
-
-let cantidad =  prompt("por favor ingrese la cantidad");
-
-function asignarProductos(productos, cantidad) {
-    return " Producto:  " + productos + "  Precio: 450$  " + "  Cantidad:  " + cantidad;
-}
-alert(asignarProductos(productos,cantidad));
-
-
-let resultado = 0;
-
-function precioIpa(precio, cantidad) {
-    resultado = precio * cantidad;
-    alert("Total a pagar: " + resultado );
-}
-
-if (parseInt(cantidad)){
-    alert("cantidad agregada correctamente");
-}
-else{
-    alert("Por favor agregue un dato valido");
-}
-precioIpa(450, cantidad);
-
-producto = prompt("Por favor ingrese su tipo de cerveza");
-
-function precioHoney(precio,cantidad) {
-    resultado = precio * cantidad;
-    alert("Total a pagar: " + resultado);
-}
-if (parseInt(cantidad)){
-    alert("Cerveza y cantidad agregada correctamente");
-}
-else{
-    alert("Por favor agregue un dato valido");
-}
-precioHoney(200, cantidad);
-
-
-function Naggels( id, nombre, precio2){
-    this.id = parseInt(id);
-    this.nombre = nombre;
-    this.precio = parseInt(precio2);
-    this.cantidad = 0;
-
-}
-
+/*
 class Producto {
     constructor (vender,reponer){
         this.vender = vender;
@@ -88,68 +31,68 @@ console.log(producto3);
 console.log(producto4); */
 
 class Cerveza{
-    constructor(id,tipo,precioCerveza){
+    constructor(id,tipo,precioCerveza,img){
     this.id =parseInt(id);
     this.tipo = tipo;
     this.precioCerveza =  parseInt(precioCerveza);
+    this.img = img;
     }
 }
 
-const tipoCerveza = new Cerveza (1,"IPA",150);
+const tipoCerveza = new Cerveza (1,"RED IPA",150, "image/redipa2.jpg");
 console.log(tipoCerveza);
 
 const tipos = [];
 
 tipos.push(tipoCerveza);
 
-tipos.push(new Cerveza(2, "HONEY", 200));
-tipos.push(new Cerveza(3,"STOUT", 250));
+tipos.push(new Cerveza(2, "AMBER", 200 ,"image/amberlager.jpg"));
+tipos.push(new Cerveza(3,"STOUT", 250, "image/stout.jpg"));
 console.log(tipos);
-
 
 /*-------- DOM----------*/
 for (const cerveza of tipos) {
     let divCervezas = document.createElement("div");
     divCervezas.innerHTML = `<h2> ${cerveza.tipo}</h2>
+                            <img src="${cerveza.img}" width = "150" "heigth = "150">
                             <h4>${cerveza.precioCerveza}</h4>
-                            <button class= "btnComprar" > COMPRAR </button>`;
+                            <button id= '${cerveza.id}' class= "btnComprar" > COMPRAR </button>`;
                              
-    document.body.appendChild(divCervezas);
+    document.getElementById("interfazProducto").appendChild(divCervezas);
 }
 
 
 /* ------eventos -------*/ 
 const boton = document.getElementsByClassName("btnComprar");
-console.dir(boton);
-boton[0].addEventListener('click', ()=>{
-    alert("Comprado");
-})
+console.log(boton);
+/*ARRAY CARRITO*/
+carrito = [];
 
-function comprarCervezas() {
-        alert('comprado');
+function comprarCervezas(event) {
+        /*console.log(event);
+        console.log(event.target.id);*/
+        const seleccionado = tipos.find ( cerveza => cerveza.id == this.id);
+        console.log(seleccionado);
+        carrito.push(seleccionado);
+        console.log(carrito);
+        localStorage.setItem('carrito' , JSON.stringify(carrito));
+        const seleccionCerveza = document.getElementById('carrito');
+        seleccionCerveza.innerHTML  = "";
+        for (const cerveza of carrito) {
+            let item = document.createElement("p");
+            item.innerHTML = ` Producto = ${cerveza.tipo} $ ${cerveza.precioCerveza}`;
+            seleccionCerveza.appendChild(item);
+        }
 }
 
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
 }
 
-const carrito = [];
-
-function comprarCervezas(event) {
-    console.log(event.target.id);
-    console.log(this.id);
-    const seleccionado = tipos.find ( tipoCerveza => tipos.id == this.id);
-    /*Agrego el carrito*/
-    carrito.push(seleccionado);
-    console.log(carrito);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-}
-for (const botones of boton) {
-    botones.addEventListener('click', comprarCervezas);
-}
 
 
-let salida = "";
+
+/*let salida = "";
 
 for (let index = 0; index < tipos.length; index++) {
      salida += " Item " + tipos[index].id +
@@ -157,7 +100,7 @@ for (let index = 0; index < tipos.length; index++) {
     " Precio " + tipos[index].precioCerveza + "\n";
     
 }
-alert(salida);
+alert(salida);*/
 
 /* Buscador*/
 
