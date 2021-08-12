@@ -6,7 +6,7 @@ class Cerveza{
     this.precioCerveza =  parseInt(precioCerveza);
     this.img = img;
     }
-}
+} 
 
 const tipoCerveza = new Cerveza (1,"RED IPA",150, "image/redipa2.jpg");
 console.log(tipoCerveza);
@@ -14,7 +14,6 @@ console.log(tipoCerveza);
 const tipos = [];
 
 tipos.push(tipoCerveza);
-
 tipos.push(new Cerveza(2, "AMBER", 200 ,"image/amberlager.jpg"));
 tipos.push(new Cerveza(3,"STOUT", 250, "image/stout.jpg"));
 console.log(tipos);
@@ -22,10 +21,14 @@ console.log(tipos);
 /*-------- DOM----------*/
 for (const cerveza of tipos) {
     let divCervezas = document.createElement("div");
-    divCervezas.innerHTML = `<h2> ${cerveza.tipo}</h2>
-                            <img src="${cerveza.img}" width = "150" "heigth = "150">
-                            <h4>${cerveza.precioCerveza}</h4>
-                            <button id= '${cerveza.id}' class= "btnComprar" > COMPRAR </button>`;
+    divCervezas.innerHTML = `<div class="card" style="width: 18rem;">
+                            <img src="${cerveza.img}" class="card-img-top" alt="..." width = "150" height = "150">
+                            <div class="card-body">
+                            <h5 class="card-title">${cerveza.tipo}</h5>
+                             <p class="card-text"> ${cerveza.precioCerveza}</p>
+                            <a href="#" class="btn btn-primary">Comprar</a>
+                            </div>
+                             </div>`;
                              
     document.getElementById("interfazProducto").appendChild(divCervezas);
 }
