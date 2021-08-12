@@ -22,39 +22,45 @@ console.log(tipos);
 for (const cerveza of tipos) {
     let divCervezas = document.createElement("div");
     divCervezas.innerHTML = `<div class="card" style="width: 18rem;">
-                            <img src="${cerveza.img}" class="card-img-top" alt="..." width = "150" height = "150">
+                            <img src="${cerveza.img}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title">${cerveza.tipo}</h5>
-                             <p class="card-text"> ${cerveza.precioCerveza}</p>
-                            <a href="#" class="btn btn-primary">Comprar</a>
+                            <p class="card-text">${cerveza.precioCerveza}</p>
+                            <a href="#" class="btn btn-primary btnComprar">COMPRAR</a>
                             </div>
                              </div>`;
                              
     document.getElementById("interfazProducto").appendChild(divCervezas);
 }
 
+function productosJQuery (tipos, id){
+    for (const productosJQ of tipos) {
+        $(id).append(`<div class="card" style="width: 18rem;">
+        <img src="${cerveza.img}" class="card-img-top" alt="...">
+        <div class="card-body">
+        <h5 class="card-title">${cerveza.tipo}</h5>
+        <p class="card-text">${cerveza.precioCerveza}</p>
+        <a href="#" class="btn btn-primary btnComprar">COMPRAR</a>
+        </div>
+         </div>`);
+    }
+}
+/* JQuery*/
+
+console.dir($(".card"));
+productosUIJQuery(tipos,'#interfazProdcutos');
+
+
 
 /* ------eventos -------*/ 
-const boton = document.getElementsByClassName("btnComprar");
+const boton = $(".btnComprar");
 console.log(boton);
 /*ARRAY CARRITO*/
 carrito = [];
 
-function comprarCervezas(event) {
-        /*console.log(event);
-        console.log(event.target.id);*/
-        const seleccionado = tipos.find ( cerveza => cerveza.id == this.id);
-        console.log(seleccionado);
-        carrito.push(seleccionado);
-        console.log(carrito);
-        localStorage.setItem('carrito' , JSON.stringify(carrito));
-        const seleccionCerveza = document.getElementById('carrito');
-        seleccionCerveza.innerHTML  = "";
-        for (const cerveza of carrito) {
-            let item = document.createElement("p");
-            item.innerHTML = ` Producto = ${cerveza.tipo} $ ${cerveza.precioCerveza}`;
-            seleccionCerveza.appendChild(item);
-        }
+function comprarCervezas(e) {
+       console.log('COMPRADO');
+       e.preventDefault();
 }
 
 for (const botones of boton) {
@@ -76,13 +82,13 @@ alert(salida);*/
 
 /* Buscador*/
 
-let idCerveza = prompt("por favor ingrese tipo de cerveza");
+/*let idCerveza = prompt("por favor ingrese tipo de cerveza");
 let encontrado = tipos.find( tipos => tipos.id == idCerveza)
 console.log(encontrado);
 
 /*filtrar precio*/
 
-let filtroPrecio = prompt("por favor ingresar precio")
+/*let filtroPrecio = prompt("por favor ingresar precio")
 let productosFiltrados = tipos.filter( tipos => tipos.precioCerveza < filtroPrecio)
 console.log(productosFiltrados);
-console.log(tipos);
+console.log(tipos);*/
