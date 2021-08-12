@@ -95,15 +95,17 @@ class Cerveza{
     }
 }
 
-const tipoCerveza = new Cerveza (2,"IPA",150);
+const tipoCerveza = new Cerveza (1,"IPA",150);
 console.log(tipoCerveza);
-/*ARRAY */
+
 const tipos = [];
-/*ARRAY*/
+
 tipos.push(tipoCerveza);
-tipos.push(new Cerveza(3, "HONEY", 200));
-tipos.push(new Cerveza(4,"STOUT", 250));
+
+tipos.push(new Cerveza(2, "HONEY", 200));
+tipos.push(new Cerveza(3,"STOUT", 250));
 console.log(tipos);
+
 
 /*-------- DOM----------*/
 for (const cerveza of tipos) {
@@ -129,6 +131,21 @@ function comprarCervezas() {
 
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
+}
+
+const carrito = [];
+
+function comprarCervezas(event) {
+    console.log(event.target.id);
+    console.log(this.id);
+    const seleccionado = tipos.find ( tipoCerveza => tipos.id == this.id);
+    /*Agrego el carrito*/
+    carrito.push(seleccionado);
+    console.log(carrito);
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+}
+for (const botones of boton) {
+    botones.addEventListener('click', comprarCervezas);
 }
 
 
