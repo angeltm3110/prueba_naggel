@@ -48,7 +48,7 @@ function productosUIJQuery (tipos, id){
         <div class="card-body">
         <h5 class="card-title">${tipos.tipo}</h5>
         <p class="card-text">${tipos.precioCerveza}</p>
-        <a href="#" class="btn btn-primary btnComprar">COMPRAR</a>
+        <a href="#" id=${tipos.id} class="btn btn-primary btnComprar">COMPRAR</a>
         </div>
          </div>`);
     }
@@ -78,6 +78,9 @@ function comprarCervezas(e) {
 
 function carritoUI(tipos){
     $("#carrito-cantidad").html(tipos.length);
+    for (const producto of tipos) {
+        $("#carrito-productos").append(`<p> ${producto.tipo} ${producto.id} </p>`);
+    }
 }
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
