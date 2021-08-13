@@ -18,6 +18,14 @@ tipos.push(new Cerveza(2, "AMBER", 200 ,"image/amberlager.jpg"));
 tipos.push(new Cerveza(3,"STOUT", 250, "image/stout.jpg"));
 console.log(tipos);
 
+/* funcion para generar la interfaz de prodcutos*/
+
+function productosUI(tipos,id){
+    for (const productoUI of tipos) {
+        document.getElementById(id).appendChild(divCervezas(productosUI));
+    }
+}
+
 /*-------- DOM----------*/
 for (const cerveza of tipos) {
     let divCervezas = document.createElement("div");
@@ -33,22 +41,22 @@ for (const cerveza of tipos) {
     document.getElementById("interfazProducto").appendChild(divCervezas);
 }
 
-function productosJQuery (tipos, id){
+function productosUIJQuery (tipos, id){
     for (const productosJQ of tipos) {
         $(id).append(`<div class="card" style="width: 18rem;">
-        <img src="${cerveza.img}" class="card-img-top" alt="...">
+        <img src="${tipos.img}" class="card-img-top" alt="...">
         <div class="card-body">
-        <h5 class="card-title">${cerveza.tipo}</h5>
-        <p class="card-text">${cerveza.precioCerveza}</p>
+        <h5 class="card-title">${tipos.tipo}</h5>
+        <p class="card-text">${tipos.precioCerveza}</p>
         <a href="#" class="btn btn-primary btnComprar">COMPRAR</a>
         </div>
          </div>`);
     }
 }
 /* JQuery*/
-
+productosUIJQuery(tipos,'#interfazProductos');
 console.dir($(".card"));
-productosUIJQuery(tipos,'#interfazProdcutos');
+
 
 
 
@@ -61,8 +69,16 @@ carrito = [];
 function comprarCervezas(e) {
        console.log('COMPRADO');
        e.preventDefault();
+       const productoID = e.target.id;
+       const seleccionado = tipos.find( p => p.id == productoID);
+       carrito.push(seleccionado);
+       carritoUI(carrito);
+
 }
 
+function carritoUI(tipos){
+    $("#carrito-cantidad").html(tipos.length);
+}
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
 }
