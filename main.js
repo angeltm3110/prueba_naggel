@@ -4,7 +4,8 @@ $(document).ready(function () {
     console.log("se cargo el dom");
 });
 
-// obtener informacion del stogare//
+$(".btnComprar").click(comprarCervezas);
+// obtener informacion del storage//
 
 if ("CARRITO" in localStorage) {
     const datosGuardados =JSON.parse(localStorage.getItem("CARRITO"));
@@ -91,7 +92,7 @@ function comprarCervezas(e) {
        console.log('COMPRADO');
        e.preventDefault();
        const productoID = e.target.id;
-       const seleccionado = tipos.find( tipos => tipos.id == productoID);
+       const seleccionado = tipos.find( p => p.id == productoID);
        carrito.push(seleccionado);
        //guardar en el storage//
        localStorage.setItem("CARRITO" , JSON.stringify(carrito));
@@ -106,6 +107,16 @@ function carritoUI(tipos){
 }
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
+}
+
+//funcion para general interfaz html del carrito
+
+function registroCarrito(tipos){
+            return `<p> ${tipos.tipo}
+            <span class"badge badge-warning"> $ ${tipos.precioCerveza}</span>
+            <a href="#" class="btn btn-danger btn-delete">X</a>
+            </p>
+            </div>`;
 }
 
 
