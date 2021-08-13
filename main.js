@@ -1,4 +1,14 @@
 
+/*LOAD*/
+
+window.addEventListener('load', ()=>{
+    console.log("IMAGENES CARGADAS");
+    $("#indicador").remove();
+})
+
+
+
+
 class Cerveza{
     constructor(id,tipo,precioCerveza,img){
     this.id =parseInt(id);
@@ -72,7 +82,10 @@ function comprarCervezas(e) {
        const productoID = e.target.id;
        const seleccionado = tipos.find( p => p.id == productoID);
        carrito.push(seleccionado);
+       //guardar en el storage//
+       localStorage.setItem("CARRITO", JSON.stringify(carrito));
        carritoUI(carrito);
+
 
 }
 
