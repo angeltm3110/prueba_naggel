@@ -1,6 +1,17 @@
+//redy//
 
+$(document).ready(function () {
+    console.log("se cargo el dom");
+});
+
+// obtener informacion del stogare//
+
+if ("CARRITO" in localStorage) {
+    const datosGuardados =JSON.parse(localStorage.getItem("CARRITO"));
+    console.log(datosGuardados[0]);
+}
 /*LOAD*/
-
+console.dir(window);
 window.addEventListener('load', ()=>{
     console.log("IMAGENES CARGADAS");
     $("#indicador").remove();
@@ -74,16 +85,16 @@ console.dir($(".card"));
 const boton = $(".btnComprar");
 console.log(boton);
 /*ARRAY CARRITO*/
-carrito = [];
+ const carrito = [];
 
 function comprarCervezas(e) {
        console.log('COMPRADO');
        e.preventDefault();
        const productoID = e.target.id;
-       const seleccionado = tipos.find( p => p.id == productoID);
+       const seleccionado = tipos.find( tipos => tipos.id == productoID);
        carrito.push(seleccionado);
        //guardar en el storage//
-       localStorage.setItem("CARRITO", JSON.stringify(carrito));
+       localStorage.setItem("CARRITO" , JSON.stringify(carrito));
        carritoUI(carrito);
 
 
