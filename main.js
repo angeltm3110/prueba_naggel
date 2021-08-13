@@ -78,9 +78,7 @@ function comprarCervezas(e) {
 
 function carritoUI(tipos){
     $("#carrito-cantidad").html(tipos.length);
-    for (const producto of tipos) {
-        $("#carrito-productos").append(`<p> ${producto.tipo} ${producto.id} </p>`);
-    }
+    
 }
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
