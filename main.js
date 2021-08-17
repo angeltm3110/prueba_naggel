@@ -103,7 +103,10 @@ function comprarCervezas(e) {
 
 function carritoUI(tipos){
     $("#carrito-cantidad").html(tipos.length);
-    
+    $("#carrito-productos").empty();
+    for (const producto of tipos) {
+            $("carrito-productos") .append(registroCarrito(producto));
+    }
 }
 for (const botones of boton) {
         botones.addEventListener('click', comprarCervezas);
@@ -111,12 +114,24 @@ for (const botones of boton) {
 
 //funcion para general interfaz html del carrito
 
+$("btn-delete").on("click" , eliminarCarrito);
+
 function registroCarrito(tipos){
             return `<p> ${tipos.tipo}
             <span class"badge badge-warning"> $ ${tipos.precioCerveza}</span>
-            <a href="#" class="btn btn-danger btn-delete">X</a>
+            <a href="#" id=${tipos.id} class="btn btn-danger btn-delete">X</a>
             </p>
             </div>`;
+}
+//funcion eliminar
+function eliminarCarrito (e){
+    console.log(e.target.id);
+   //eliminar filter
+   carrito = carrito.filter(tipos => tipos.id != e.target.id);
+   //actualizar intrfaz
+   carritoUI(carrito);
+   //guardar en storage
+   localStorage.setItem("CARRITO" ,JSON.stringify(carrito));
 }
 
 
