@@ -16,6 +16,7 @@ console.dir(window);
 window.addEventListener('load', ()=>{
     console.log("IMAGENES CARGADAS");
     $("#indicador").remove();
+    $("#interfazProducto").fadeIn();
 })
 
 
