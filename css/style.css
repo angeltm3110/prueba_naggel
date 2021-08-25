@@ -277,8 +277,14 @@ p {
 }
 
 /** seccion pedidos*/
-#interfazProductos {
-  background-color: black;
+header {
+  z-index: 100;
+}
+
+.description {
+  height: 25px;
+  overflow: hidden;
+  transition: height 0.3s ease-in 0.3s;
 }
 
 /*---footer- seccion home--*/
