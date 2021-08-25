@@ -16,7 +16,8 @@ console.dir(window);
 window.addEventListener('load', ()=>{
     console.log("IMAGENES CARGADAS");
     $("#indicador").remove();
-    $("#interfazProducto").fadeIn();
+    $("#interfazProducto").fadeIn(10000);
+    $("#interfazProducto").fadeOut(3000);
 })
 
 
@@ -135,6 +136,16 @@ function eliminarCarrito (e){
    localStorage.setItem("CARRITO" ,JSON.stringify(carrito));
 }
 
+// Animaciones //
+
+const duracion_animacion = 1000;
+$("#banner-pedidos").animate({
+                    margin: '40px',
+                    opacity : 0.6,
+
+}, duracion_animacion ) .delay(3000)
+                        .fadeOut(4000);
+                            
 
 
 
