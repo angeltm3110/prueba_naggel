@@ -70,7 +70,9 @@ const setCarrito = objeto => {
 }
 
 const pintarCarrito = () =>{
-    console.log(carrito)
+     //console.log(carrito)
+
+    items.innerHTML = ''
     Object.values(carrito).forEach(producto => {
         templateCarrito.querySelector('th').textContent = producto.id
         templateCarrito.querySelectorAll('td')[0].textContent = producto.title
@@ -86,3 +88,12 @@ const pintarCarrito = () =>{
 }
 
     
+const pintarFooter = () => {
+    footer.innerHTML = ''
+    if(Object.keys(carrito).length === 0){
+        footer.innerHTML = `<th scope="row" colspan="5">Carrito vacío - comience a comprar!</th>`
+    }
+
+    const nCantidad = Object.values(carrito).reduce((acumulador, {cantidad}) => acumulador + cantidad, 0 )
+    console.log(nCantidad)
+}
