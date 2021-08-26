@@ -333,15 +333,12 @@ p {
 /*# sourceMappingURL=style.css.map */
 /** seccion pedidos*/
 
-header{
-  z-index: 100;
-}
-.description{
-  height: 25px;
-  overflow: hidden;
-  transition: height .3s ease-in .3s; 
+.card-img-top {
+  width : 1rem;
+  height : 1rem;
 }
 
-.description:hover {
-  height: 80px;
+.card {
+  width : 1rem;
+  height : 1rem;
 }
