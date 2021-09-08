@@ -15,5 +15,8 @@
     "url": "https://github.com/angeltm3110/prueba_naggel/issues"
   },
   "homepage": "https://github.com/angeltm3110/prueba_naggel#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "sweetalert2": "^11.1.5"
+  }
 }

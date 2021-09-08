@@ -1,3 +1,8 @@
+$(document).ready(function () {
+    console.log("se cargo el dom");
+});
+
+
 const cards = document.getElementById('cards')
 const items = document.getElementById('items')
 const footer = document.getElementById('footer')
@@ -9,6 +14,7 @@ const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
 
+// LOCAL STORAGE //
 document.addEventListener('DOMContentLoaded', () => { fetchData() 
 
     if (localStorage.getItem('carrito')) {
@@ -141,15 +147,30 @@ const accionBotones = () => {
 
 }
 
-
+// OBJETOS //
 
 const fetchData = () => {
 
 	let productos = {
 	  1: { nombre: "Red Ipa", precio: 250,"img": "./image/redipa2.jpg" },
-	  2: { nombre: "Amber", precio: 150,"img": "./image/amberlager.jpg" },
-	  3: { nombre: "Stout", precio: 90,"img":  "./image/stout.jpg" },
+	  2: { nombre: "Amber", precio: 500,"img": "./image/amberlager.jpg" },
+	  3: { nombre: "Stout", precio: 400,"img":  "./image/stout.jpg" },
 	};
 
 	pintarCards(productos)
 }	
+
+ // ANIMACIONES //
+
+const duracion_animacion = 3000;
+$(".banner-pedidos").animate({
+                    margin: '40px',
+                    opacity : 0.6,
+					left : '200px',
+
+}, duracion_animacion ) .delay(3000)
+                        ;
+
+
+
+

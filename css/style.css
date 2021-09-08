@@ -333,3 +333,31 @@ p {
 /*# sourceMappingURL=style.css.map */
 /** seccion pedidos*/
 
+.card-body{
+  background-color: #17202A;
+  color: white;
+}
+
+
+h5{
+  color: white
+}
+
+.banner-pedidos{
+  justify-content: center;
+  text-align: center;
+  padding: 20px 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.pedidos{
+  background-color: #F6F8F8;
+  border-radius: 2px;
+}
+
+.btn-success{
+  text-align: center;
+  justify-content: center;
+}
+
+

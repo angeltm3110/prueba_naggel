@@ -3,20 +3,25 @@
 <head>
 	<meta charset="utf-8">
 	<title>Pedidos Naggel</title>
+
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" 
   rel="stylesheet" 
   integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
 
-  
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">   
     <script src="https://kit.fontawesome.com/0d1bce12c1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-
+  
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
     <div class="container-fluid ">
       <a class="navbar-brand" href="index.html"> <img src="image/logo.jpg" height="90px" width="90px" class="rounded-circle"  alt="logo cerveceria"></a>
@@ -40,13 +45,18 @@
           <li class="nav-item fs-4 p-3 ">
             <a class="nav-link" href="reservas.html">Reservas</a>
           </li>
+          <li class="nav-item fs-4 p-3 ">
+            <a class="nav-link" href="pedidos.html">Pedidos</a>
+          </li>
       </div>
     </div>
   </nav>
+  <h1 class="banner-pedidos">Aca puedes hacer tu pedido!</h1>
+
 	<div class="container pedidos">
-		<h1>Carrito de compras</h1>
+		
 		<hr>
-		<table class="table">
+		<table class="table fs-4">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -61,11 +71,13 @@
           <tr id="footer">
             <th scope="row" colspan="5">Carrito vacío - Comience a comprar!</th>
           </tr>
+          <button type="button" id="alerta" class="btn btn-success compra">Compra Total</button>
         </tfoot>
       </table>
-		<div class="row" id="cards"></div>
+		<div class="row text-center" id="cards"></div>
 	</div>
 
+  
 	<template id="template-footer">
       <th scope="row" colspan="2">Total productos</th>
       <td>10</td>
@@ -106,6 +118,7 @@
 			</div>
 		</div>
 	</template>
+ 
 
   <footer class="text-white py-4 ">
     <div class="container">
@@ -146,9 +159,26 @@
       
 
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" 
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+crossorigin="anonymous"></script>
+<script  src="main.js"></script>
+
+<script src="toast.js"></script>
+
+
+
+
 </body>
 
 
-<script  src="main.js"></script>
+
+
+
 
 </html> 
